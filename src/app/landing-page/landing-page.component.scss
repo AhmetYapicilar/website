@@ -1,0 +1,140 @@
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: #141d2f;
+//  background: conic-gradient(#141d2f 180deg, #1E283D 180deg);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  //padding-left: 100px;
+  padding-right: 100px;
+}
+
+.flex {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  > img {
+    width: 300px;
+  }
+}
+
+.profile-photo {
+  width: 600px;
+  position: absolute;
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    width: 1000px;
+    height: 600px;
+  }
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  // background-image: conic-gradient(from -96deg at 100% 88%, #141D2F, #ff9100);
+}
+
+.text {
+  display: flex;
+  > span {
+    font-size: 64px;
+    color: white;
+    font-weight: 400;
+    transform: rotate(-90deg);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+}
+
+.profession {
+  font-size: 48px;
+  font-weight: 400;
+  color: #9747ff;
+}
+
+.talk-button {
+  border-radius: 10px;
+  padding: 15px 30px 15px 30px;
+  background-color: #70e61c;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin-top: 24px;
+  cursor: pointer;
+  &:hover {
+    background-color: #9747ff;
+    padding: 20px 35px 20px 35px;
+  }
+}
+
+.references {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+ // margin-left: 130px;
+  > a {
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+  }
+  > img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.vertical-violet-line {
+  width: 100px;
+  height: 4px;
+  background-color: #9747ff;
+}
+
+.column-scroll {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  > img {
+    width: 24px;
+    height: 24px;
+  }
+  > span {
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    rotate: (90deg);
+  }
+}

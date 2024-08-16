@@ -1,0 +1,50 @@
+nav{
+    padding: 37px 100px 37px 100px !important;
+    position: fixed;
+    top: 0;
+    left: -8px;
+    width: 100%;
+    z-index: 10;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >a {
+        text-decoration: none;
+        color: white;
+        font-size: 32px;
+        font-weight: 400;
+    }
+}
+
+.highlight-purple{
+    color: #9747FF;
+}
+
+.highlight-green {
+    color: #70E61C; /* Grüne Farbe für die hervorgehobenen Buchstaben */
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    margin-right: 120px;
+    gap: 32px;
+    >a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+
+        &:hover {
+            color: #70E61C;
+        }
+
+        &:active {
+            color: #70E61C;
+            text-decoration: underline;
+            text-decoration-color: rgb(151,71,255);
+            text-underline-offset: 50%;
+        }
+    }
+}
