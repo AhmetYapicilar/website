@@ -6,12 +6,13 @@ import { NavbarComponent } from './landing-page/navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { ContactformComponent } from "./contactform/contactform.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingPageComponent, NavbarComponent, AboutMeComponent, SkillsComponent, PortfolioComponent],
+  imports: [CommonModule, RouterOutlet, LandingPageComponent, NavbarComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactformComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
