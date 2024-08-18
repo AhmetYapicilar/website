@@ -1,22 +1,18 @@
 section {
   position: relative;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   align-items: center;
   background-color: #141d2f;
-//  background: conic-gradient(#141d2f 180deg, #1E283D 180deg);
   overflow-y: hidden;
   overflow-x: hidden;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  //padding-left: 100px;
-  padding-right: 100px;
 }
 
 .curve{
   position: absolute;
-  top: 230px;
+  top: 96px;
+  left: 0;
   width: 100%;
 }
 
@@ -48,7 +44,6 @@ section {
   align-items: center;
   margin-top: 40px;
   z-index: 30;
-  // background-image: conic-gradient(from -96deg at 100% 88%, #141D2F, #ff9100);
 }
 
 .text {
@@ -102,22 +97,22 @@ section {
   display: flex;
   align-items: center;
   gap: 32px;
- // margin-left: 130px;
   > a {
     font-weight: 400;
     font-size: 24px;
     text-decoration: none;
     color: white;
   }
-  > img {
-    height: 30px;
+}
+
+.icons{
+  height: 30px;
     width: 30px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
     &:hover {
       transform: scale(1.5);
     }
-  }
 }
 
 .vertical-violet-line {

@@ -1,10 +1,10 @@
 .right{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 50%;
+    width: 50vw;
     >img{
-        width: 600px;
+        width: 464px;
         height: 400px;
         object-fit: cover;
     }
@@ -16,7 +16,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     gap: 40px;
-    width: 50%;
+    width: 50vw;
 }
 
 .info{

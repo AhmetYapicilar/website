@@ -1,26 +1,88 @@
-<section>
-    <div class="headline">
-        <div class="vertical-violet-line"></div>
-        <h2>Contact</h2>
+<section class="padding">
+  <div class="headline">
+    <div class="vertical-violet-line"></div>
+    <h2>Contact</h2>
+  </div>
+  <div class="space-between">
+    <div class="text">
+      <h4>Got a problem to solve?</h4>
+      <div class="paragraph">
+        <p>
+          Contact me through this form, I am interested in hearing from you,
+          knowing your ideas and contributing to your projects with my work.
+        </p>
+        <p>Need a Frontend developer? Contact me!</p>
+      </div>
     </div>
-    <div class="space-between">
-        <div class="text"></div>
-        <div class="form-container">
-            <form>
-                <label for="fname">Your name</label><br>
-                <input type="text" id="fname" name="name" value="John"><br>
-                <label for="fname">Your email</label><br>
-                <input type="email" id="fname" name="email" value="John"><br>
-                <label for="lname">Your message</label><br>
-                <textarea type="text" id="lname" name="message" value="Doe"></textarea><br><br>
-                <input type="submit" value="Submit">
-              </form> 
-              <div class="flex">
-                <input type="checkbox">
-                <p></p>
-              </div>
-              <button>Send message:)</button>
-              <img class="icon" src="./assets/img/icons/arrow-up.png">
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input
+          required
+          name="name"
+          type="text"
+          [(ngModel)]="contactData.name"
+          [ngModelOptions]="{ standalone: true }"
+          placeholder="Your name"
+        /><br />
+        <input
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          name="email"
+          type="email"
+          [(ngModel)]="contactData.email"
+          [ngModelOptions]="{ standalone: true }"
+          placeholder="Your email"
+        /><br />
+        <textarea
+          required
+          name="message"
+          type="text"
+          [(ngModel)]="contactData.message"
+          [ngModelOptions]="{ standalone: true }"
+          placeholder="Your message"
+        ></textarea
+        ><br /><br />
+        <div class="column">
+          <div class="flex">
+            <label class="checkbox">
+              <input
+                required
+                [(ngModel)]="isChecked"
+                type="checkbox"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </label>
+            <p>
+              I've read the <a href="#">privacy policy</a> and agree to the
+              processing of my data as outlined.
+            </p>
+          </div>
+          <div class="center">
+            <button
+              type="submit"
+              [disabled]="!isChecked"
+              [ngClass]="{ 'green-button': isChecked }"
+            >
+              Send message :)
+            </button>
+          </div>
         </div>
+        <!-- Schließendes Tag für class="column" -->
+      </form>
+      <!-- Schließendes Tag für das Formular -->
+      <!-- Der div Container für das Formular ist korrekt geschlossen -->
+      <div class="flex-end">
+        <a href="#"
+          ><img src="assets/img/icons/arrow-up.png" alt="Arrow Up"
+        /></a>
+      </div>
     </div>
+    <!-- Schließendes Tag für class="space-between" -->
+  </div>
+  <!-- Schließendes Tag für class="padding" -->
+  <img
+    class="shadow"
+    src="assets/img/purple-shadow-contact.png"
+    alt="Shadow"
+  />
 </section>
