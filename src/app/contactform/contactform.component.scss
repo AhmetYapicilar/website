@@ -83,6 +83,7 @@ form{
         padding: 15px 25px 15px 25px;
         width: 100%;
         background-color: #141D2F;
+        color: white;
         &::placeholder{
             font-weight: 400;
             font-size: 16px;
@@ -102,6 +103,7 @@ form{
         height: 120px;
         overflow-y: auto;
         resize: none;
+        color: white;
         &::placeholder{
             font-weight: 400;
             font-size: 16px;
@@ -111,6 +113,19 @@ form{
             border-color: #59B421;
         }
     }
+    > input.ng-invalid.ng-touched,
+    > textarea.ng-invalid.ng-touched {
+        border-color: #7D1C37;
+    }
+    > input.ng-valid.ng-touched,
+    > textarea.ng-valid.ng-touched {
+        border-color: #70E61C;
+    }
+}
+
+.error-message{
+    color: #7D1C37;
+    font-size: 12px;
 }
 
 .column{

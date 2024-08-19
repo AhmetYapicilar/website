@@ -18,38 +18,44 @@
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <input
           required
-          name="name"
           type="text"
           [(ngModel)]="contactData.name"
-          [ngModelOptions]="{ standalone: true }"
+          name="name"
           placeholder="Your name"
-        /><br />
+        />
+        <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="error-message">
+          Your name is required</div>
+          <br />
         <input
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          name="email"
           type="email"
           [(ngModel)]="contactData.email"
-          [ngModelOptions]="{ standalone: true }"
+          name="email"
           placeholder="Your email"
-        /><br />
+        />
+        <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="error-message">
+          Your email is required</div><br />
         <textarea
           required
-          name="message"
           type="text"
           [(ngModel)]="contactData.message"
-          [ngModelOptions]="{ standalone: true }"
+          name="message"
           placeholder="Your message"
         ></textarea
-        ><br /><br />
+        >
+        <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched" class="error-message">
+          Your message is empty</div>
+          <br /><br />
         <div class="column">
           <div class="flex">
             <label class="checkbox">
               <input
                 required
                 [(ngModel)]="isChecked"
+                name="checkbox"
                 type="checkbox"
-                [ngModelOptions]="{ standalone: true }"
+                (change)="validateCheckbox()"
               />
             </label>
             <p>
@@ -57,11 +63,15 @@
               processing of my data as outlined.
             </p>
           </div>
+          <div *ngIf="!isChecked && checkboxTouched" class="error-message">
+            Please accept the privacy policy
+          </div>
           <div class="center">
             <button
               type="submit"
               [disabled]="!isChecked"
               [ngClass]="{ 'green-button': isChecked }"
+              name="button"
             >
               Send message :)
             </button>
@@ -73,7 +83,7 @@
       <!-- Der div Container für das Formular ist korrekt geschlossen -->
       <div class="flex-end">
         <a href="#"
-          ><img src="assets/img/icons/arrow-up.png" alt="Arrow Up"
+          ><img src="./assets/img/icons/arrow-up.png" alt="Arrow Up"
         /></a>
       </div>
     </div>
@@ -82,7 +92,7 @@
   <!-- Schließendes Tag für class="padding" -->
   <img
     class="shadow"
-    src="assets/img/purple-shadow-contact.png"
+    src="./assets/img/purple-shadow-contact.png"
     alt="Shadow"
   />
 </section>

@@ -44,6 +44,7 @@ section {
   align-items: center;
   margin-top: 40px;
   z-index: 30;
+  width: 50vw;
 }
 
 .text {
@@ -53,6 +54,7 @@ section {
     color: white;
     font-weight: 400;
     transform: rotate(-90deg);
+    white-space: nowrap;
   }
 }
 
