@@ -46,5 +46,11 @@ nav{
             text-decoration-color: rgb(151,71,255);
             text-underline-offset: 50%;
         }
+
+        :target{
+            text-decoration: underline;
+            text-decoration-color: #9747FF;
+        }
+
     }
 }

@@ -11,7 +11,7 @@ section {
 
 .curve{
   position: absolute;
-  top: 96px;
+  top: 190px;
   left: 0;
   width: 100%;
 }
@@ -47,33 +47,42 @@ section {
   width: 50vw;
 }
 
-.text {
-  display: flex;
-  > span {
+.iam{
+  transform: rotate(-90deg);
+  // width: 152px;
+  // height: 64px;
+  >span {
     font-size: 64px;
     color: white;
     font-weight: 400;
-    transform: rotate(-90deg);
     white-space: nowrap;
   }
+}
+
+.text {
+  display: flex;
+  align-items: center;
 }
 
 .column {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 100px;
 }
 
 .name {
   font-size: 56px;
   font-weight: 700;
   color: white;
+  white-space: nowrap;
 }
 
 .profession {
   font-size: 48px;
   font-weight: 400;
   color: #9747ff;
+  white-space: nowrap;
 }
 
 .talk-button {

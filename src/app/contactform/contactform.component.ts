@@ -21,41 +21,41 @@ export class ContactformComponent {
   mailTest = true;
   http = inject(HttpClient);
 
-  // post = {
-  //   endPoint: 'https://deineDomain.de/sendMail.php',
-  //   body: (payload: any) => JSON.stringify(payload),
-  //   options: {
-  //     headers: {
-  //       'Content-Type': 'text/plain',
-  //       responseType: 'text',
-  //     },
-  //   },
-  // };
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
-  //  onSubmit(ngForm: NgForm) {
-    // if (ngForm.submitted && ngForm.valid && !this.mailTest) {
-    //   this.http.post(this.post.endPoint, this.post.body(this.contactData))
-    //     .subscribe({
-    //       next: (response) => {
+   onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
 
-    //         ngForm.resetForm();
-    //       },
-    //       error: (error) => {
-    //         console.error(error);
-    //       },
-    //       complete: () => console.info('send post complete'),
-    //     });
-    // } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
 
-    //   ngForm.resetForm();
-    // }
-  //  }
-
-   onSubmit(ngForm: NgForm){
-    if (ngForm.submitted && ngForm.valid){
-      console.log(this.contactData);
+      ngForm.resetForm();
     }
    }
+
+  //  onSubmit(ngForm: NgForm){
+  //   if (ngForm.submitted && ngForm.valid){
+  //     console.log(this.contactData);
+  //   }
+  //  }
 
   validateCheckbox() {
     this.checkboxTouched = true;

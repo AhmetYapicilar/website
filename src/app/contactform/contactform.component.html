@@ -23,7 +23,7 @@
           name="name"
           placeholder="Your name"
         />
-        <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="error-message">
+        <div *ngIf="contactForm.controls['name']?.invalid && contactForm.controls['name'].touched" class="error-message">
           Your name is required</div>
           <br />
         <input
@@ -34,7 +34,7 @@
           name="email"
           placeholder="Your email"
         />
-        <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="error-message">
+        <div *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email'].touched" class="error-message">
           Your email is required</div><br />
         <textarea
           required
@@ -44,7 +44,7 @@
           placeholder="Your message"
         ></textarea
         >
-        <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched" class="error-message">
+        <div *ngIf="contactForm.controls['message']?.invalid && contactForm.controls['message'].touched" class="error-message">
           Your message is empty</div>
           <br /><br />
         <div class="column">
@@ -82,8 +82,8 @@
       <!-- Schließendes Tag für das Formular -->
       <!-- Der div Container für das Formular ist korrekt geschlossen -->
       <div class="flex-end">
-        <a href="#"
-          ><img src="./assets/img/icons/arrow-up.png" alt="Arrow Up"
+        <a href="#landing-page"
+          ><img src="assets/img/icons/arrow-up.png" alt="Arrow Up"
         /></a>
       </div>
     </div>
@@ -92,7 +92,7 @@
   <!-- Schließendes Tag für class="padding" -->
   <img
     class="shadow"
-    src="./assets/img/purple-shadow-contact.png"
+    src="assets/img/purple-shadow-contact.png"
     alt="Shadow"
   />
 </section>

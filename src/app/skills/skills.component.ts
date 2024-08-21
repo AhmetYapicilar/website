@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../landing-page/navbar/navbar.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(){
+  }
+
 
   paths = [
     "assets/img/skills/html-icon.png",
