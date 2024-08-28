@@ -12,5 +12,4 @@
     <a href="mailto:ahmetselimyapicilar@gmail.com"><img src="assets/img/icons/email-icon.png" alt="Email" /></a>
     <a href="https://www.linkedin.com/in/ahmet-yapicilar-3907b0233/"><img src="assets/img/icons/linkedin-icon.png" alt="LinkedIn" /></a>
   </div>
-  <a class="imprint-mobile" href="#">Impressum</a>
 </footer>

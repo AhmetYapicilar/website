@@ -17,6 +17,51 @@ nav{
     }
 }
 
+.underline{
+    text-decoration: underline !important;
+    text-decoration-color: #9747FF !important;
+}
+
+.overlay{
+    transition: all 150ms ease-in-out;
+    transform: translateX(150vw);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #414856;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    >a {text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    &:hover {
+        color: #70E61C;
+    }
+
+    // &:active {
+    //     color: #70E61C;
+    //     text-decoration: underline;
+    //     text-decoration-color: rgb(151,71,255);
+    //     text-underline-offset: 50%;
+    // }
+    }
+}
+
+.transform{
+    transform: translateX(0);
+}
+
+.burgermenu{
+    transform: translateX(120vw);
+    transition: all 150ms ease-in-out;
+}
+
 .highlight-purple{
     color: #9747FF;
 }
@@ -30,27 +75,32 @@ nav{
     align-items: center;
     margin-right: 120px;
     gap: 32px;
+    @media (max-width: 650px) {
+        gap: 16px;;
+      }
     >a {
         text-decoration: none;
         color: white;
         font-size: 24px;
         font-weight: 400;
+        @media (max-width: 650px) {
+            font-size: 16px;;
+          }
 
         &:hover {
             color: #70E61C;
         }
 
-        &:active {
-            color: #70E61C;
-            text-decoration: underline;
-            text-decoration-color: rgb(151,71,255);
-            text-underline-offset: 50%;
-        }
+        // &:active {
+        //     color: #70E61C;
+        //     text-decoration: underline;
+        //     text-decoration-color: rgb(151,71,255);
+        //     text-underline-offset: 50%;
+        // }
 
-        :target{
-            text-decoration: underline;
-            text-decoration-color: #9747FF;
-        }
-
+        // :target{
+        //     text-decoration: underline;
+        //     text-decoration-color: #9747FF;
+        // }
     }
 }

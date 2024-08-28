@@ -7,7 +7,19 @@
         width: 464px;
         height: 400px;
         object-fit: cover;
+        @media(max-width: 1100px){
+            width: 350px;
+            height: 300px;
+          }
     }
+}
+
+.top-mobile{
+    display: none;
+}
+
+.bottom-mobile{
+    display: none;
 }
 
 .left{
@@ -22,6 +34,7 @@
 .info{
     display: flex;
     flex-direction: column;
+    padding-left: 100px;
     >h4{
         text-align: end;
         font-weight: 700;

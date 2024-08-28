@@ -1,0 +1,33 @@
+<section class="padding">
+  <div class="left">
+    @for(path of paths; track path; let i = $index){
+    <div class="column">
+      <img src="{{ path }}" alt="" />
+      <span>{{ skills[i] }}</span>
+    </div>
+    }
+    <div class="column">
+      <img src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
+      <span class="purple-span">Continually learning</span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="flex">
+      <h2>My skills</h2>
+      <div class="vertical-violet-line"></div>
+    </div>
+    <div class="skill-info">
+      <p>
+        I have gained experience in building projects with different frontend
+        technologies and concepts.
+      </p>
+      <h4>Looking for <span class="highlight">another skill</span>?</h4>
+      <p>
+        Feel free to contact me, I look forward to expanding on my previous
+        knowledge.
+      </p>
+      <a href="#contact"><button>Get in touch</button></a>
+    </div>
+  </div>
+  <img class="shadow" src="assets/img/myskills-green-shadow.png" />
+</section>

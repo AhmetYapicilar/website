@@ -1,0 +1,201 @@
+@media(max-width: 720px){
+    .section-normal{
+        display: none;
+    }
+
+    .section-mobile{
+        background-color: #141D2F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100vw;
+        position: relative;
+    }    
+
+    .headline-mobile{
+        width: 150vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        >h2{
+            font-weight: 700;
+            color: white;
+            font-size: 45px;
+            text-align: center;
+        }
+    }
+
+    .vertical-violet-line-mobile{
+        width: 30%;
+        height: 4px;
+        background-color: #9747FF;
+    }
+
+    .text-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        >h4{
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+        }
+    }
+
+    .paragraph-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 16px;
+        >p{
+            font-weight: 400;
+            font-size: 16px;
+            color: white;
+        }
+    }
+
+    .form-container-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        >input{
+            border: 2px solid #9747FF;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 15px 25px 15px 25px;
+            width: 100%;
+            background-color: #141D2F;
+            color: white;
+            &::placeholder{
+                font-weight: 400;
+                font-size: 16px;
+                color: white;
+            }
+            &:hover, :active{
+                border-color: #59B421;
+            }
+        }
+        >textarea{
+            border: 2px solid #9747FF;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 15px 25px 15px 25px;
+            width: 100%;
+            background-color: #141D2F;
+            height: 120px;
+            overflow-y: auto;
+            resize: none;
+            color: white;
+            &::placeholder{
+                font-weight: 400;
+                font-size: 16px;
+                color: white;
+            }
+            &:hover, :active{
+                border-color: #59B421;
+            }
+        }
+        > input.ng-invalid.ng-touched,
+        > textarea.ng-invalid.ng-touched {
+            border-color: #7D1C37;
+        }
+        > input.ng-valid.ng-touched,
+        > textarea.ng-valid.ng-touched {
+            border-color: #70E61C;
+        }
+    }
+
+    .error-message-mobile{
+        color: #7D1C37;
+        font-size: 12px;
+    }
+    
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .flex{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 64%;
+        >p{
+            font-weight: 400;
+            font-size: 16px;
+            color: white;
+            >a{
+                color: #9747FF;
+                font-weight: 400;
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .checkbox{
+        display: flex;
+        width: 13px;
+        height: 12px;
+        border: 2px solid #70E61C;
+        border-radius: 4px;
+        >input{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button{
+        padding: 10px 25px 10px 25px;
+        border-radius: 10px;
+        gap: 10px;
+        background-color: #B6B6B6;
+        box-shadow: 4px 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
+        color: white;
+        font-weight: 400;
+        font-size: 24px;
+        margin-top: 32px;
+    }
+    
+    .green-button{
+        padding: 20px 35px 20px 35px;
+        background-color: #70e61c;
+        cursor: pointer;
+        &:hover{
+            background-color: #9747ff;
+            padding: 25px 40px 25px 40px;
+        }
+    }
+
+    .flex-end-mobile{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .shadow-mobile{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        height: 160px;
+    }
+}

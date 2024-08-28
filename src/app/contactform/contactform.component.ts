@@ -8,7 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrls: ['./contactform.component.scss', './contactform-mobile.component.scss']
 })
 export class ContactformComponent {
   isChecked: boolean = false;
@@ -22,7 +22,7 @@ export class ContactformComponent {
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://http://ahmet-yapicilar.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -33,7 +33,8 @@ export class ContactformComponent {
   };
 
    onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.valid /*&& !this.mailTest*/) {
+      console.log(ngForm);
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {

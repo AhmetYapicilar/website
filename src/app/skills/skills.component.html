@@ -1,4 +1,4 @@
-<section class="padding">
+<section class="padding section-normal">
   <div class="left">
     @for(path of paths; track path; let i = $index){
     <div class="column">
@@ -30,4 +30,60 @@
     </div>
   </div>
   <img class="shadow" src="assets/img/myskills-green-shadow.png" />
+</section>
+
+<section class="padding-mobile section-mobile">
+  <div class="headline-mobile">
+      <h2>My skills</h2>
+      <div class="vertical-violet-line-mobile"></div>
+  </div>
+  <div class="info-mobile">
+    <p>
+      I have gained experience in building projects with different frontend
+      technologies and concepts.
+    </p>
+  </div>
+  <div class="flex-mobile">
+    <div *ngFor="let path of paths | slice:0:3; let i = index">
+      <div class="column-mobile float-left-mobile">
+        <img src="{{ path }}" alt="" />
+        <span>{{ skills[i] }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex-mobile">
+    <div *ngFor="let path of paths | slice:3:6; let i = index">
+      <div class="column-mobile float-left-mobile">
+        <img src="{{ path }}" alt="" />
+        <span>{{ skills[i+3] }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex-mobile">
+    <div *ngFor="let path of paths | slice:6:9; let i = index">
+      <div class="column-mobile float-left-mobile">
+        <img src="{{ path }}" alt="" />
+        <span>{{ skills[i+6] }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="center-mobile">
+    <div class="column-mobile flex-0">
+      <img src="{{ paths[9] }}">
+      <span>{{ skills[9] }}</span>
+    </div>
+    <div class="column-mobile flex-0">
+      <img src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
+      <span class="purple-span">Continually learning</span>
+    </div>
+  </div>
+  <div class="bottom-mobile">
+    <h4>Looking for <span class="highlight">another skill</span>?</h4>
+    <p>
+      Feel free to contact me, I look forward to expanding on my previous
+      knowledge.
+    </p>
+    <a href="#contact"><button>Get in touch</button></a>
+  </div>
+  <img class="shadow-mobile" src="assets/img/myskills-green-shadow.png" />
 </section>

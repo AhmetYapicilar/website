@@ -1,0 +1,19 @@
+<div class="left">
+  <div class="info">
+    <h4>El Pollo Loco</h4>
+    <span>JavaScript | HTML | CSS</span>
+    <p>
+      A simple Jump-and-Run game based on an object-oriented approach. Help Pepe
+      to find coins and bottles to fight against the big chicken.
+    </p>
+  </div>
+  <div class="buttons">
+    <button class="live-test">Live test</button>
+    <a href="https://github.com/AhmetYapicilar/EL_Pollo_Loco" target="_blank"
+      ><button class="github">Github</button></a
+    >
+  </div>
+</div>
+<div class="right">
+  <img src="assets/img/projects/PolloLoco.png" />
+</div>

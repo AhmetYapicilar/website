@@ -6,7 +6,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
   standalone: true,
   imports: [NavbarComponent],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  styleUrls: ['./landing-page.component.scss', './landing-page-mobile.component.scss']
 })
 export class LandingPageComponent {
 

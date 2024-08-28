@@ -1,33 +1,3 @@
-* {
-  margin: 0;
-  scroll-behavior: smooth;
-  padding: 0;
-}
-
-body {
-  font-family: "Poppins";
-  overflow-x: hidden;
-}
-
-.padding {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.padding-mobile{
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.selected-link {
-  text-decoration: underline;
-  text-decoration-color: #9747ff;
-}
-
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

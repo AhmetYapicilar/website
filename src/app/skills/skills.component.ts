@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule, NgFor } from '@angular/common';
 import { NavbarComponent } from '../landing-page/navbar/navbar.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [CommonModule, NgFor, NavbarComponent,],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss', './skill-mobile.component.scss']
 })
 export class SkillsComponent {
 

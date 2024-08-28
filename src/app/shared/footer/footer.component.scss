@@ -1,59 +1,90 @@
-footer{
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 4px solid #70E61C;
-    background-color: #141D2F;
-}
-
-.column{
+footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid #70e61c;
+  background-color: #141d2f;
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px; /* Begrenze die maximale Breite des Hauptcontainers */
+    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+  }
+  @media (max-width: 850px) {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
-.name{
-    >a{
-        text-decoration: none;
-        color: white;
-        font-size: 32px;
-        font-weight: 400;
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  > a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    @media (max-width: 850px) {
+      font-size: 50px;
     }
+  }
 }
 
-.imprint{
+.imprint {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.imprint-mobile {
+  display: none;
+  @media (max-width: 850px) {
+    display: flex;
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     color: white;
+  }
 }
 
-.highlight-purple{
-    color: #9747FF;
+.highlight-purple {
+  color: #9747ff;
 }
 
 .highlight-green {
-    color: #70E61C; /* Grüne Farbe für die hervorgehobenen Buchstaben */
+  color: #70e61c; /* Grüne Farbe für die hervorgehobenen Buchstaben */
 }
 
-.middle{
-    font-weight: 400;
-    font-size: 24px;
-    color: white;
+.middle {
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
 }
 
-.flex{
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    > a {
-        height: 30px;
-        width: 30px;
-        cursor: pointer;
-        transition: all 100ms ease-in-out;
-        &:hover {
-          transform: scale(1.5);
-        }
-      }
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  > a {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+ @media(max-width: 850px){
+    gap: 48px;
+ }
 }

@@ -1,0 +1,231 @@
+@media (max-width: 780px) {
+  .section-normal {
+    display: none;
+  }
+
+  .section-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #141d2f;
+    gap: 24px;
+  }
+
+  .shadow-mobile{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .headline-mobile {
+    width: 115%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    > h2 {
+      font-size: 45px;
+      font-weight: 700;
+      color: white;
+      text-align: end;
+      white-space: nowrap;
+      flex: 1;
+    }
+    > div {
+      width: 80px;
+      height: 4px;
+      background-color: #9747ff;
+    }
+  }
+
+  .info-mobile {
+    display: flex;
+    justify-content: flex-end;
+    > p {
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+      text-align: end;
+    }
+  }
+
+  .flex-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Abstand zwischen den Spalten */
+    max-width: 100%; /* Begrenzung der maximalen Breite */
+    flex-wrap: nowrap; /* Verhindert, dass die Elemente umbrechen */
+  }
+
+  .column-mobile {
+    flex: 1; /* Elemente gleichmäßig auf die verfügbare Breite verteilen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    min-width: 0; /* Verhindert, dass die Spalten zu groß werden */
+  }
+
+  .flex-0{
+    flex: none;
+    gap: 10px;
+  }
+
+  .column-mobile img {
+    width: 100%; /* Bildgröße passt sich an die Breite der Spalte an */
+    max-width: 50px; /* Begrenzung der maximalen Bildgröße */
+    height: auto;
+    object-fit: cover;
+    transition: all ease-in-out 150ms;
+    &:hover {
+      animation: updown 1s ease-in-out;
+      transform: translateY(0);
+    }
+  }
+
+  .column-mobile span {
+    color: white;
+    font-weight: 700;
+    font-size: calc(12px + -0.5vw); /* Dynamische Schriftgröße */
+    text-align: center;
+    white-space: nowrap; /* Verhindert, dass der Text in mehreren Zeilen angezeigt wird */
+  }
+
+  @keyframes updown {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-50px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .center-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .bottom-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    > h4 {
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: left;
+    }
+    > p {
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: left;
+    }
+    > a {
+      text-decoration: none;
+    }
+  }
+
+  button {
+    padding: 15px 30px 15px 30px;
+    background-color: #70e61c;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #9747ff;
+      padding: 20px 35px 20px 35px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .headline-mobile {
+    width: 120%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    > h2 {
+      font-size: 45px;
+      font-weight: 700;
+      color: white;
+      text-align: end;
+      white-space: nowrap;
+      flex: 1;
+    }
+    > div {
+      width: 40px;
+      height: 4px;
+      background-color: #9747ff;
+    }
+  }
+
+  .flex-0{
+    flex: 1;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .flex-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .bottom-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    > h4 {
+      text-align: right;
+    }
+    > p {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .headline-mobile {
+    width: 150%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    > h2 {
+      font-size: 45px;
+      font-weight: 700;
+      color: white;
+      text-align: end;
+      white-space: nowrap;
+    }
+    > div {
+      width: 40px;
+      height: 4px;
+      background-color: #9747ff;
+      flex: 1;
+    }
+  }
+}
