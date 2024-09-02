@@ -8,7 +8,7 @@ import { CommentsComponent } from './comments/comments.component';
   standalone: true,
   imports: [ProjectJoinComponent, ProjectPollolocoComponent, CommentsComponent],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss', './portfolio-mobile.component.scss']
+  styleUrls: ['./portfolio.component.scss', './portfolio-tablet.component.scss', './portfolio-mobile.component.scss']
 })
 export class PortfolioComponent {
 

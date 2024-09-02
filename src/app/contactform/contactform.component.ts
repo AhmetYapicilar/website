@@ -8,7 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrls: ['./contactform.component.scss', './contactform-mobile.component.scss']
+  styleUrls: ['./contactform.component.scss', './contactform-form.component.scss', './contactform-mobile.component.scss']
 })
 export class ContactformComponent {
   isChecked: boolean = false;
@@ -22,7 +22,7 @@ export class ContactformComponent {
   http = inject(HttpClient);
 
   post = {
-    endPoint: 'https://http://ahmet-yapicilar.com/sendMail.php',
+    endPoint: 'https://ahmet-yapicilar.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -33,7 +33,7 @@ export class ContactformComponent {
   };
 
    onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.valid /*&& !this.mailTest*/) {
+    if (ngForm.submitted && ngForm.valid && !this.mailTest) {
       console.log(ngForm);
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -48,15 +48,18 @@ export class ContactformComponent {
         });
     } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
 
-      ngForm.resetForm();
+      this.resetForm(ngForm);
     }
    }
 
-  //  onSubmit(ngForm: NgForm){
-  //   if (ngForm.submitted && ngForm.valid){
-  //     console.log(this.contactData);
-  //   }
-  //  }
+   resetForm(ngForm: NgForm) {
+    // Setze die Formular-Daten zurück
+    ngForm.resetForm();
+    
+    // Setze die Variablen zurück
+    this.isChecked = false;
+    this.checkboxTouched = false;
+  }
 
   validateCheckbox() {
     this.checkboxTouched = true;

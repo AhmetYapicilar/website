@@ -7,7 +7,7 @@ import { NavbarComponent } from '../landing-page/navbar/navbar.component';
   standalone: true,
   imports: [CommonModule, NgFor, NavbarComponent,],
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss', './skill-mobile.component.scss']
+  styleUrls: ['./skills.component.scss', './skill-mobile.component.scss', './skill-mobile.component.scss']
 })
 export class SkillsComponent {
 

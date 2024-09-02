@@ -1,45 +1,46 @@
 <nav>
-  <div id="overlay" class="overlay">
-    <a (click)="toggleMenu()" href="#about-me" tabindex="1">About me</a>
-    <a (click)="toggleMenu()" href="#skills">Skills</a>
-    <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
-    <a (click)="toggleMenu()" href="#contact">Contact</a>
-  </div>
-  <a class="name" href="#landing-page">
-    <span class="highlight-purple">A</span>hme<span class="highlight-green"
-      >t</span
-    >
-  </a>
-  <img
-    (click)="toggleMenu()"
-    class="burgermenu"
-    src="assets/img/icons/burgermenu.png"
-  />
-  <div class="links">
-    <a
-      href="#about-me"
-      (click)="
-       setUnderline('aboutme')
-      "
-      [ngClass]="{ underline: underlineAboutme }"
-      tabindex="1"
-      >About me</a
-    >
-    <a
-      href="#skills"
-      (click)="
-        setUnderline('skills')
-      "
-      [ngClass]="{ underline: underlineSkills }"
-      >Skills</a
-    >
-    <a
-      href="#portfolio"
-      (click)="
-        setUnderline('portfolio')
-      "
-      [ngClass]="{ underline: underlinePortfolio }"
-      >Portfolio</a
-    >
-  </div>
-</nav>
+    <div id="overlay" class="overlay">
+      <a (click)="toggleMenu()" href="#about-me" tabindex="1">About me</a>
+      <a (click)="toggleMenu()" href="#skills">Skills</a>
+      <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+      <a (click)="toggleMenu()" href="#contact">Contact</a>
+    </div>
+    <a class="name" href="#landing-page">
+      <span class="highlight-purple">A</span>hme<span class="highlight-green"
+        >t</span
+      >
+    </a>
+    <img
+      (click)="toggleMenu()"
+      class="burgermenu"
+      src="assets/img/icons/burgermenu.png"
+    />
+    <div class="links">
+      <a
+        href="#about-me"
+        (click)="
+         setUnderline('aboutme')
+        "
+        [ngClass]="{ underline: underlineAboutme }"
+        tabindex="1"
+        >About me</a
+      >
+      <a
+        href="#skills"
+        (click)="
+          setUnderline('skills')
+        "
+        [ngClass]="{ underline: underlineSkills }"
+        >Skills</a
+      >
+      <a
+        href="#portfolio"
+        (click)="
+          setUnderline('portfolio')
+        "
+        [ngClass]="{ underline: underlinePortfolio }"
+        >Portfolio</a
+      >
+    </div>
+  </nav>
+

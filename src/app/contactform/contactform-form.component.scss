@@ -1,0 +1,132 @@
+.form-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (min-width: 1900px) {
+      width: 75%;
+    }
+    > input {
+      border: 2px solid #9747ff;
+      border-radius: 10px;
+      gap: 10px;
+      padding: 15px 25px 15px 25px;
+      width: 100%;
+      background-color: #141d2f;
+      color: white;
+      @media (min-width: 1900px) {
+        padding: 25px 35px;
+        font-size: 24px;
+      }
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+      }
+      &:hover,
+      :active {
+        border-color: #59b421;
+      }
+    }
+    > textarea {
+      border: 2px solid #9747ff;
+      border-radius: 10px;
+      gap: 10px;
+      padding: 15px 25px 15px 25px;
+      width: 100%;
+      background-color: #141d2f;
+      height: 120px;
+      overflow-y: auto;
+      resize: none;
+      color: white;
+      @media (min-width: 1900px) {
+        padding: 25px 35px;
+        font-size: 24px;
+      }
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+      }
+      &:hover,
+      :active {
+        border-color: #59b421;
+      }
+    }
+    > input.ng-invalid.ng-touched,
+    > textarea.ng-invalid.ng-touched {
+      border-color: #7d1c37;
+    }
+    > input.ng-valid.ng-touched,
+    > textarea.ng-valid.ng-touched {
+      border-color: #70e61c;
+    }
+  }
+  
+  .error-message {
+    color: #7d1c37;
+    font-size: 12px;
+    @media (min-width: 1400px) and (max-width: 1899px) {
+      font-size: 16px;
+    }
+    @media (min-width: 1900px) {
+      font-size: 24px;
+    }
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    > p {
+      font-weight: 400;
+      font-size: 16px;
+      color: white;
+      > a {
+        color: #9747ff;
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+    @media (min-width: 1900px) {
+      > p {
+        font-size: 24px;
+      }
+      > a {
+        font-size: 24px;
+      }
+    }
+  }
+  
+  .checkbox {
+    display: flex;
+    width: 13px;
+    height: 12px;
+    border: 2px solid #70e61c;
+    border-radius: 4px;
+    @media (min-width: 1900px) {
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+    }
+    > input {
+      width: 100%;
+      height: 100%;
+    }
+  }

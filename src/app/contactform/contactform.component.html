@@ -59,7 +59,7 @@
               />
             </label>
             <p>
-              I've read the <a href="#">privacy policy</a> and agree to the
+              I've read the <a href="assets/privacy.html" target=_blank>privacy policy</a> and agree to the
               processing of my data as outlined.
             </p>
           </div>
@@ -69,8 +69,8 @@
           <div class="center">
             <button
               type="submit"
-              [disabled]="!isChecked"
-              [ngClass]="{ 'green-button': isChecked }"
+              [disabled]="!contactForm.form.valid || !isChecked"
+              [ngClass]="{ 'green-button': contactForm.form.valid && isChecked }"
               name="button"
             >
               Send message :)
@@ -83,7 +83,7 @@
       <!-- Der div Container für das Formular ist korrekt geschlossen -->
       <div class="flex-end">
         <a href="#landing-page"
-          ><img src="assets/img/icons/arrow-up.png" alt="Arrow Up"
+          ><img class="arrow" src="assets/img/icons/arrow-up.png" alt="Arrow Up"
         /></a>
       </div>
     </div>
@@ -157,7 +157,7 @@
             />
           </label>
           <p>
-            I've read the <a href="#">privacy policy</a> and agree to the
+            I've read the <a href="assets/privacy.html">privacy policy</a> and agree to the
             processing of my data as outlined.
           </p>
         </div>
