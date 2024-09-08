@@ -1,4 +1,4 @@
-<section class="padding section-normal">
+<section (click)="onMouseLeave()" class="padding section-normal">
   <div class="left">
     @for(path of paths; track path; let i = $index){
     <div class="column">
@@ -7,8 +7,9 @@
     </div>
     }
     <div class="column">
-      <img src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
-      <span class="purple-span">Continually learning</span>
+      <img class="info-learning-img" [ngClass]="{ 'd-none': !showInfo, 'display-flex': showInfo }" src="assets/img/learninginfo.png" alt="">
+      <img (mouseover)="onMouseOver()" class="no-animation" src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
+      <span (mouseover)="onMouseOver()" class="purple-span">Continually learning</span>
     </div>
   </div>
   <div class="right">
@@ -32,7 +33,7 @@
   <img class="shadow" src="assets/img/myskills-green-shadow.png" />
 </section>
 
-<section class="padding-mobile section-mobile">
+<section (click)="onMouseLeave()" class="padding-mobile section-mobile">
   <div class="headline-mobile">
       <h2>My skills</h2>
       <div class="vertical-violet-line-mobile"></div>
@@ -73,8 +74,9 @@
       <span>{{ skills[9] }}</span>
     </div>
     <div class="column-mobile flex-0">
-      <img src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
-      <span class="purple-span">Continually learning</span>
+      <img class="info-learning-img-mobile" [ngClass]="{ 'd-none-mobile': !showInfo, 'display-flex-mobile': showInfo }" src="assets/img/learninginfo.png" alt="">
+      <img class="no-animation-mobile" (mouseover)="onMouseOver()" src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
+      <span (mouseover)="onMouseOver()" class="purple-span">Continually learning</span>
     </div>
   </div>
   <div class="bottom-mobile">

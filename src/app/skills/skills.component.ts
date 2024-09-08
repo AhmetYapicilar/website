@@ -11,7 +11,17 @@ import { NavbarComponent } from '../landing-page/navbar/navbar.component';
 })
 export class SkillsComponent {
 
+  showInfo: boolean = false;
+
   constructor(){
+  }
+
+  onMouseOver(){
+    this.showInfo = true;
+  }
+
+  onMouseLeave(){
+    this.showInfo = false;
   }
 
 

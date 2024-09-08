@@ -5,10 +5,11 @@
   align-items: center;
   max-width: 100vw;
   position: relative;
-  // @media screen and (min-width: 1440px) {
-  //     max-width: 1440px; /* Begrenze die maximale Breite des Hauptcontainers */
-  //     margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
-  //   }
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+    max-width: 1920px; /* Begrenze die maximale Breite des Hauptcontainers */
+    overflow-x: hidden;
+  }
 }
 
 .section-mobile {
@@ -22,19 +23,22 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  @media(min-width: 1921px){
+    width: 100%;
+  }
   > h2 {
     font-weight: 700;
     color: white;
     font-size: 90px;
     text-align: center;
+    @media (max-width: 1090px) {
+      font-size: 72px;
+    }
     @media (min-width: 1900px) {
       font-size: 110px;
     }
-    @media (min-width: 2500px) {
-      font-size: 180px;
-    }
-    @media (min-width: 3000px) {
-      font-size: 250px;
+    @media(min-width: 1921px){
+      width: 50%;
     }
   }
 }
@@ -46,9 +50,6 @@
   left: -100px;
   height: 4px;
   background-color: #9747ff;
-  @media (min-width: 1440px) {
-    width: 40%;
-  }
 }
 
 .space-between {
@@ -132,25 +133,19 @@ button {
   cursor: pointer;
   &:hover {
     background-color: #9747ff;
-    padding: 25px 40px 25px 40px;
+    transform: scale(1.2);
   }
   @media (min-width: 1450px) {
     padding: 35px 65px;
     &:hover {
       background-color: #9747ff;
-      padding: 40px 70px;
+      transform: scale(1.2);
     }
   }
   @media (min-width: 1920px) {
     padding: 45px 75px;
     &:hover {
-      padding: 50px 80px;
-    }
-  }
-  @media (min-width: 3800px) {
-    padding: 90px 150px;
-    &:hover {
-      padding: 100px 160px;
+      transform: scale(1.2);
     }
   }
 }

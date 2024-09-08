@@ -9,21 +9,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (min-width: 4096px) {
-    max-width: 4096px; 
-   }
-  @media(min-width: 3800px){
-    padding: 80px 400px !important;
-  }
-  @media(min-width: 2500px){
-    padding: 60px 200px !important;
+  @media screen and (min-width: 1920px) {
+    width: 1920px;
+    max-width: 1920px;
+     margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+     right: 0;
+     left: 0;
   }
   > a {
     text-decoration: none;
     color: white;
     font-size: 32px;
     font-weight: 400;
-    @media (min-width: 2000px){
+    @media (min-width: 1900px){
         font-size: 88px;
       }
   }
@@ -79,16 +77,10 @@ nav {
 .links {
   display: flex;
   align-items: center;
-  margin-right: 120px;
+  margin-right: 200px;
   gap: 32px;
   @media (max-width: 650px) {
     gap: 16px;
-  }
-  @media(min-width: 2500px){
-    margin-right: 250px;
-  }
-  @media(min-width: 3800px){
-    margin-right: 500px;
   }
   > a {
     text-decoration: none;
@@ -98,7 +90,7 @@ nav {
     @media (max-width: 650px) {
       font-size: 16px;
     }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       font-size: 48px;
     }
 

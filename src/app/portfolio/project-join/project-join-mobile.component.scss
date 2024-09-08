@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    z-index: 3;
   }
 
   .live-test-mobile {
@@ -64,7 +65,7 @@
     cursor: pointer;
     &:hover {
       background-color: #70e61c;
-      padding: 15px 20px 15px 30px;
+      transform: scale(1.2);
     }
   }
 
@@ -79,7 +80,7 @@
     cursor: pointer;
     &:hover {
       background-color: #70e61c;
-      padding: 15px 20px 15px 30px;
+      transform: scale(1.2);
     }
   }
 }

@@ -7,9 +7,13 @@
 body {
   font-family: "Poppins";
   overflow-x: hidden;
+  background-color: #141d2f;
+  max-width: 100%;
    @media screen and (min-width: 4096px) {
-    max-width: 4096px; /* Begrenze die maximale Breite des Hauptcontainers */
      margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
    }
 }
 
@@ -18,12 +22,12 @@ body {
   padding-right: 100px;
   padding-top: 40px;
   padding-bottom: 40px;
-  @media(min-width: 2500px){
-    padding: 80px 200px;
-  }
-  @media(min-width: 3800px){
-    padding: 100px 400px;
-  }
+  // @media(min-width: 2500px){
+  //   padding: 80px 200px;
+  // }
+  // @media(min-width: 3800px){
+  //   padding: 100px 400px;
+  // }
 }
 
 .padding-mobile{

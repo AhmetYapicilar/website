@@ -12,6 +12,11 @@ footer {
     align-items: center;
     gap: 24px;
   }
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+    max-width: 1920px; /* Begrenze die maximale Breite des Hauptcontainers */
+    overflow-x: hidden;
+  }
 }
 
 .column {
@@ -26,13 +31,10 @@ footer {
     color: white;
     font-size: 32px;
     font-weight: 400;
-    @media(min-width: 2500px){
-      font-size: 56px;
-    }
-    @media(min-width: 1920px) and (max-width: 2499px){
+    @media (min-width: 1920px) {
       font-size: 48px;
     }
-    @media(min-width: 1360px) and (max-width:1919px) {
+    @media (min-width: 1360px) and (max-width: 1919px) {
       font-size: 40px;
     }
     @media (max-width: 850px) {
@@ -46,13 +48,7 @@ footer {
   font-weight: 400;
   font-size: 16px;
   color: white;
-  @media(min-width: 2500px){
-    font-size: 50px;
-  }
-  @media(min-width: 1920px) and (max-width: 2499px){
-    font-size: 40px;
-  }
-  @media(min-width: 1360px) and (max-width:1919px) {
+  @media (min-width: 1360px){
     font-size: 32px;
   }
   @media (max-width: 850px) {
@@ -83,13 +79,7 @@ footer {
   font-weight: 400;
   font-size: 24px;
   color: white;
-  @media(min-width: 2500px){
-    font-size: 50px;
-  }
-  @media(min-width: 1920px) and (max-width: 2499px){
-    font-size: 40px;
-  }
-  @media(min-width: 1360px) and (max-width:1919px) {
+  @media (min-width: 1360px){
     font-size: 32px;
   }
 }
@@ -103,39 +93,23 @@ footer {
     width: 30px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
-    >img{
+    > img {
       height: 30px;
       width: 30px;
     }
     &:hover {
       transform: scale(1.5);
     }
-    @media(min-width: 3800px){
-      height: 88px;
-      width: 88px;
-      >img{
-        height: 88px;
-        width: 88px;
-      }
-    }
-    @media(min-width: 2500px) and (max-width: 3799px){
-      height: 60px;
-      width: 60px;
-      >img{
-        height: 60px;
-        width: 60px;
-      }
-    }
-    @media (min-width: 1360px) and (max-width: 2499px) {
+    @media (min-width: 1360px) {
       height: 56px;
       width: 56px;
-      >img{
+      > img {
         height: 56px;
         width: 56px;
       }
     }
   }
- @media(max-width: 850px){
+  @media (max-width: 850px) {
     gap: 48px;
- }
+  }
 }

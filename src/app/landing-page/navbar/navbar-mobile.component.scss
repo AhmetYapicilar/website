@@ -1,7 +1,7 @@
-@media(max-width: 520px){
+@media screen and (max-device-width: 520px){
     nav{
     padding: 37px 25px 37px 25px !important;
-    width: 100%;
+    // width: 100vw;
     >a{
      font-size: 24px;
     }}

@@ -7,13 +7,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     max-width: 100vw;
     min-height: 100vh;
     background-color: #141d2f;
     gap: 24px;
+    overflow-x: hidden;
   }
 
-  .shadow-mobile{
+  .shadow-mobile {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -22,7 +24,7 @@
   }
 
   .headline-mobile {
-    width: 115%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -72,7 +74,26 @@
     min-width: 0; /* Verhindert, dass die Spalten zu groß werden */
   }
 
-  .flex-0{
+  .no-animation-mobile {
+    animation: none;
+  }
+
+  .info-learning-img-mobile {
+    width: 150px !important;
+    height: 120px !important;
+    animation: none !important;
+    max-width: 150px !important;
+  }
+
+  .d-none-mobile {
+    display: none;
+  }
+
+  .display-flex-mobile {
+    display: flex;
+  }
+
+  .flex-0 {
     flex: none;
     gap: 10px;
   }
@@ -123,6 +144,7 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    z-index: 3;
     > h4 {
       color: white;
       font-weight: 700;
@@ -155,14 +177,14 @@
     cursor: pointer;
     &:hover {
       background-color: #9747ff;
-      padding: 20px 35px 20px 35px;
+      transform: scale(1.2);
     }
   }
 }
 
 @media (max-width: 520px) {
   .headline-mobile {
-    width: 120%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -181,7 +203,7 @@
     }
   }
 
-  .flex-0{
+  .flex-0 {
     flex: 1;
     gap: 10px;
   }
@@ -210,7 +232,7 @@
 
 @media (max-width: 350px) {
   .headline-mobile {
-    width: 150%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
