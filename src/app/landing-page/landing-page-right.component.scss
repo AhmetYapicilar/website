@@ -132,6 +132,9 @@
     align-items: center;
     gap: 32px;
     z-index: 30;
+    @media (min-width: 1921px){
+      display: none;
+    }
     @media(min-width: 561px) and (max-width: 660px) {
       gap: 16px;
     }
@@ -140,9 +143,6 @@
       font-size: 24px;
       text-decoration: none;
       color: white;
-      @media(min-width: 1920px) and (max-width: 2499px){
-        font-size: 40px;
-      }
       @media(min-width: 1360px) and (max-width:1919px) {
         font-size: 32px;
       }
@@ -157,14 +157,6 @@
     width: 30px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
-    @media (min-width: 1360px) {
-      height: 56px;
-      width: 56px;
-      >img{
-        height: 56px;
-        width: 56px;
-      }
-    }
     &:hover {
       transform: scale(1.5);
     }

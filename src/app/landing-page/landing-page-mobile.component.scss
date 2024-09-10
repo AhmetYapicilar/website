@@ -58,6 +58,7 @@
     z-index: 30;
     margin-top: 24px;
     margin-bottom: 32px;
+    position: relative;
   }
 
   .text-mobile {
@@ -130,9 +131,9 @@
   }
 
   .vertical-violet-line-mobile {
-    width: 33%;
+    width: 24%;
     position: absolute;
-    bottom: 32px;
+    bottom: 0;
     left: 0;
     border: 1px solid #9747ff;
   }
@@ -144,7 +145,14 @@
   }
 
   .curve-mobile {
-    top: 310px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .curve-mobile {
+    height: 517px;
   }
 }
 
@@ -154,5 +162,11 @@
   }
   .vertical-violet-line-mobile {
     width: 25%;
+  }
+}
+
+@media (max-width: 560px) and (orientation: landscape) {
+  .section-mobile {
+    min-height: 150vh; /* Set height to 150vh for landscape mode */
   }
 }

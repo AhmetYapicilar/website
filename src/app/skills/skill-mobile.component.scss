@@ -251,3 +251,9 @@
     }
   }
 }
+
+@media (max-width: 560px) and (orientation: landscape) {
+  .section-mobile {
+    min-height: 150vh; /* Set height to 150vh for landscape mode */
+  }
+}

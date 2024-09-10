@@ -2,15 +2,19 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, PrivacyPolicyComponent],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform-form.component.scss', './contactform-mobile.component.scss']
 })
 export class ContactformComponent {
+  constructor(private router: Router) {}
   isChecked: boolean = false;
   checkboxTouched: boolean = false;
   contactData = {
@@ -63,5 +67,10 @@ export class ContactformComponent {
 
   validateCheckbox() {
     this.checkboxTouched = true;
+  }
+
+  openPrivacyPolicy(event: Event){
+    event.preventDefault();
+    this.router.navigateByUrl('/privacy-policy/');
   }
 }

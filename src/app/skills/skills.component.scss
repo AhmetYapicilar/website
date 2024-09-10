@@ -205,9 +205,8 @@ button {
   bottom: 0px;
   width: 300px;
   height: 300px;
-  @media (min-width: 1920px) {
-    width: 500px;
-    height: 500px;
+  @media (min-width: 1921px){
+    display: none;
   }
 }
 

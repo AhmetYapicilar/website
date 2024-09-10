@@ -10,20 +10,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   @media screen and (min-width: 1920px) {
-    width: 1920px;
-    max-width: 1920px;
-     margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
-     right: 0;
-     left: 0;
+    width: 100vw;
+    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+    right: 0;
+    left: 0;
   }
   > a {
     text-decoration: none;
     color: white;
     font-size: 32px;
     font-weight: 400;
-    @media (min-width: 1900px){
-        font-size: 88px;
-      }
+    @media (min-width: 1900px) {
+      font-size: 88px;
+    }
   }
 }
 
@@ -71,7 +70,7 @@ nav {
 }
 
 .highlight-green {
-  color: #70e61c; 
+  color: #70e61c;
 }
 
 .links {
@@ -79,21 +78,11 @@ nav {
   align-items: center;
   margin-right: 200px;
   gap: 32px;
-  @media (max-width: 650px) {
-    gap: 16px;
-  }
   > a {
     text-decoration: none;
     color: white;
     font-size: 24px;
     font-weight: 400;
-    @media (max-width: 650px) {
-      font-size: 16px;
-    }
-    @media (min-width: 1900px) {
-      font-size: 48px;
-    }
-
     &:hover {
       color: #70e61c;
     }

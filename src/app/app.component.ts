@@ -8,11 +8,13 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    HomepageComponent,
     CommonModule,
     RouterOutlet,
     LandingPageComponent,

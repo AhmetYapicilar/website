@@ -1,0 +1,34 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    height: 100vh;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+p{
+    text-align: center;
+    color: white;
+}

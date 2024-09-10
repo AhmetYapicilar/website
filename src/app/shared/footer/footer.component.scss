@@ -12,11 +12,6 @@ footer {
     align-items: center;
     gap: 24px;
   }
-  @media screen and (min-width: 1920px) {
-    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
-    max-width: 1920px; /* Begrenze die maximale Breite des Hauptcontainers */
-    overflow-x: hidden;
-  }
 }
 
 .column {

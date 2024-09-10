@@ -98,6 +98,7 @@
   }
   @media (min-height: 1440px){
     align-items: flex-end;
+    height: 50%;
   }
   > img {
     width: 350px;
@@ -118,11 +119,17 @@
   background-color: #70e61c;
   flex: 1;
   z-index: 2;
+  @media (min-width: 1921px){
+    display: none;
+  }
 }
 
 .violet-shadow {
   position: absolute;
   height: 550px;
   right: 0;
+  @media (min-width: 1921px){
+    display: none;
+  }
 }
 

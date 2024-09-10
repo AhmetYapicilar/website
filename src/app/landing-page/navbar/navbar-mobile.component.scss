@@ -1,20 +1,43 @@
-@media screen and (max-device-width: 520px){
-    nav{
+@media screen and (max-device-width: 550px) {
+  nav {
     padding: 37px 25px 37px 25px !important;
     // width: 100vw;
-    >a{
-     font-size: 24px;
-    }}
-    .links{
-        display: none;
+    > a {
+      font-size: 24px;
     }
-    .burgermenu{
-        display: flex;
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-        transform: translateX(0);
-        transition: all 150ms ease-in-out;
-        margin-right: 32px;
+  }
+  .links {
+    display: none;
+  }
+  .burgermenu {
+    display: flex;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transform: translateX(0);
+    transition: all 150ms ease-in-out;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 550px) {
+  nav {
+    padding: 37px 25px 37px 25px !important;
+    // width: 100vw;
+    > a {
+      font-size: 24px;
     }
- }
+  }
+  .links {
+    display: none;
+  }
+  .burgermenu {
+    display: flex;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transform: translateX(0);
+    transition: all 150ms ease-in-out;
+    margin-right: 32px;
+  }
+}
