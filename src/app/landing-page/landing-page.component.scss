@@ -25,6 +25,30 @@
   left: 0;
   width: 100%;
   z-index: 20;
+  @media (min-width: 1921px){
+    display: none;
+  }
+  @media(min-height: 700px) and (max-height: 850px){
+    height: calc(240px + 20vh);
+  }
+  @media(min-height: 851px) and (max-height: 1080px){
+    height: calc(240px + 36vh);
+  }
+  @media(min-height: 1081px) and (max-height: 1200px){
+    height: calc(240px + 44vh);
+  }
+  @media(min-height: 1201px) and (max-height: 1440px){
+    height: calc(240px + 50vh);
+  }
+  @media(min-height: 1441px) and (max-height: 2160px){
+    height: calc(240px + 60vh);
+  }
+  @media(min-height: 2161px) and (max-height: 2304px){
+    height: calc(240px + 62vh);
+  }
+  @media(min-height: 2305px) and (max-height: 2880px){
+    height: calc(240px + 67vh);
+  }
 }
 
 .flex {
@@ -42,20 +66,11 @@
 
 .self-photo {
   object-fit: cover;
-  width: 285px;
+  width: 300px;
   height: 400px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  @media (min-width: 1440px) {
-    width: 350px;
-    height: 450px;
-  }
-  @media (min-width: 1900px) {
-    width: 380px;
-    height: 500px;
-  }
+  transform: translateX(-50%);
 }
  
 @media (min-width: 561px) {
@@ -88,60 +103,5 @@
 @media (min-width: 1330px) {
   .littleshadow {
     width: 450px;
-  }
-}
-
-@media (max-height: 629px) {
-  .curve {
-    height: 365px;
-  }
-}
-
-@media (min-height: 630px) and (max-height: 769px) {
-  .curve {
-    height: 400px;
-  }
-}
-
-@media (min-height: 770px) and (max-height: 899px) {
-  .curve {
-    height: 490px;
-  }
-}
-
-@media (min-height: 900px) and (max-height: 1019px) {
-  .curve {
-    height: 530px;
-  }
-}
-
-@media (min-height: 1020px) and (max-height: 1069px) {
-  .curve {
-    height: 550px;
-  }
-}
-
-@media (min-height: 1070px) and (min-width: 1919px) {
-  .curve {
-    height: 550px;
-  }
-}
-
-@media (min-height: 1091px) and (max-height: 1200px) and (min-width: 1919px) {
-  .self-photo {
-    height: 690px;
-    width: 500px;
-  }
-}
-
-@media (min-height: 1400px) and (min-width: 1950px) {
-  .curve {
-    bottom: 15%;
-  }
-}
-
-@media (min-height: 2150px) and (min-width: 3800px) {
-  .curve {
-    bottom: 25%;
   }
 }

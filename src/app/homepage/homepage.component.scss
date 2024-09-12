@@ -6,6 +6,19 @@
   position: relative;
 }
 
+button{
+  margin-top: 150px;
+}
+
+.fade-section {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
 #about-me {
   scroll-margin-top: 100px;
 }
@@ -39,6 +52,10 @@
 }
 
 .references{
+  display: none;
+}
+
+.curve{
   display: none;
 }
 
@@ -94,6 +111,7 @@
     width: 56px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
+    z-index: 32;
     >img{
       height: 56px;
       width: 56px;
@@ -110,5 +128,19 @@
     width: 30%;
     height: 4px;
     background-color: #9747ff;
+  }
+
+  .curve {
+    display: flex;
+    position: absolute;
+    top: 40vh;
+    height: 240px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 20;
+    @media(min-height: 1441px){
+      height: calc(240px + 40vh);
+    }
   }
 }

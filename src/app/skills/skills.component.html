@@ -2,32 +2,26 @@
   <div class="left">
     @for(path of paths; track path; let i = $index){
     <div class="column">
-      <img src="{{ path }}" alt="" />
+      <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i] } }}" />
       <span>{{ skills[i] }}</span>
     </div>
     }
     <div class="column">
-      <img class="info-learning-img" [ngClass]="{ 'd-none': !showInfo, 'display-flex': showInfo }" src="assets/img/learninginfo.png" alt="">
-      <img (mouseover)="onMouseOver()" class="no-animation" src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
-      <span (mouseover)="onMouseOver()" class="purple-span">Continually learning</span>
+      <img class="info-learning-img" [ngClass]="{ 'd-none': !showInfo, 'display-flex': showInfo }" src="assets/img/learninginfo.png" alt="{{ 'LearningInfoAlt' | translate }}" />
+      <img (mouseover)="onMouseOver()" class="no-animation" src="assets/img/skills/contiunally-learning-icon.svg" alt="{{ 'ContinuallyLearningIconAlt' | translate }}" />
+      <span (mouseover)="onMouseOver()" class="purple-span">{{ 'ContinuallyLearningText' | translate }}</span>
     </div>
   </div>
   <div class="right">
     <div class="flex">
-      <h2>My skills</h2>
+      <h2>{{ 'MySkillsTitle' | translate }}</h2>
       <div class="vertical-violet-line"></div>
     </div>
     <div class="skill-info">
-      <p>
-        I have gained experience in building projects with different frontend
-        technologies and concepts.
-      </p>
-      <h4>Looking for <span class="highlight">another skill</span>?</h4>
-      <p>
-        Feel free to contact me, I look forward to expanding on my previous
-        knowledge.
-      </p>
-      <a href="#contact"><button>Get in touch</button></a>
+      <p>{{ 'SkillsDescription' | translate }}</p>
+      <h4>{{ 'LookingForSkill' | translate }}</h4>
+      <p>{{ 'ContactMeDescription' | translate }}</p>
+      <a href="#contact"><button>{{ 'GetInTouchButton' | translate }}</button></a>
     </div>
   </div>
   <img class="shadow" src="assets/img/myskills-green-shadow.png" />
@@ -35,19 +29,16 @@
 
 <section class="padding-mobile section-mobile">
   <div class="headline-mobile">
-      <h2>My skills</h2>
+      <h2>{{ 'MySkillsTitle' | translate }}</h2>
       <div class="vertical-violet-line-mobile"></div>
   </div>
   <div class="info-mobile">
-    <p>
-      I have gained experience in building projects with different frontend
-      technologies and concepts.
-    </p>
+    <p>{{ 'SkillsDescription' | translate }}</p>
   </div>
   <div class="flex-mobile">
     <div *ngFor="let path of paths | slice:0:3; let i = index">
       <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="" />
+        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i] } }}" />
         <span>{{ skills[i] }}</span>
       </div>
     </div>
@@ -55,7 +46,7 @@
   <div class="flex-mobile">
     <div *ngFor="let path of paths | slice:3:6; let i = index">
       <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="" />
+        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+3] } }}" />
         <span>{{ skills[i+3] }}</span>
       </div>
     </div>
@@ -63,29 +54,26 @@
   <div class="flex-mobile">
     <div *ngFor="let path of paths | slice:6:9; let i = index">
       <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="" />
+        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+6] } }}" />
         <span>{{ skills[i+6] }}</span>
       </div>
     </div>
   </div>
   <div class="center-mobile">
     <div class="column-mobile flex-0">
-      <img src="{{ paths[9] }}">
+      <img src="{{ paths[9] }}" alt="{{ 'SkillAltText' | translate : { skill: skills[9] } }}" />
       <span>{{ skills[9] }}</span>
     </div>
     <div class="column-mobile flex-0">
-      <img class="info-learning-img-mobile" [ngClass]="{ 'd-none-mobile': !showInfo, 'display-flex-mobile': showInfo }" src="assets/img/learninginfo.png" alt="">
-      <img class="no-animation-mobile" (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" src="assets/img/skills/contiunally-learning-icon.svg" alt="" />
-      <span (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" class="purple-span">Continually learning</span>
+      <img class="info-learning-img-mobile" [ngClass]="{ 'd-none-mobile': !showInfo, 'display-flex-mobile': showInfo }" src="assets/img/learninginfo.png" alt="{{ 'LearningInfoAlt' | translate }}" />
+      <img class="no-animation-mobile" (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" src="assets/img/skills/contiunally-learning-icon.svg" alt="{{ 'ContinuallyLearningIconAlt' | translate }}" />
+      <span (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" class="purple-span">{{ 'ContinuallyLearningText' | translate }}</span>
     </div>
   </div>
   <div class="bottom-mobile">
-    <h4>Looking for <span class="highlight">another skill</span>?</h4>
-    <p>
-      Feel free to contact me, I look forward to expanding on my previous
-      knowledge.
-    </p>
-    <a href="#contact"><button>Get in touch</button></a>
+    <h4>{{ 'LookingForSkill' | translate }}</h4>
+    <p>{{ 'ContactMeDescription' | translate }}</p>
+    <a href="#contact"><button>{{ 'GetInTouchButton' | translate }}</button></a>
   </div>
   <img class="shadow-mobile" src="assets/img/myskills-green-shadow.png" />
 </section>

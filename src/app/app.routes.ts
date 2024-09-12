@@ -7,5 +7,4 @@ export const routes: Routes = [
     { path: '', component: HomepageComponent },
     { path: 'imprint/', component: ImpressumComponent },
     { path: 'privacy-policy/', component: PrivacyPolicyComponent }
-
 ];

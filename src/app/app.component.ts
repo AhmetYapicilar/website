@@ -9,6 +9,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -24,10 +26,18 @@ import { HomepageComponent } from './homepage/homepage.component';
     PortfolioComponent,
     ContactformComponent,
     FooterComponent,
+    TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'portfolio';
+  constructor(private translate: TranslateService){
+    this.translate.setDefaultLang('en');
+  }
+
+  switchLanguage(language: string){
+    this.translate.use(language);
+  }
 }

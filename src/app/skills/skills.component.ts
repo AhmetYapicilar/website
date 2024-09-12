@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { NavbarComponent } from '../landing-page/navbar/navbar.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, NgFor, NavbarComponent,],
+  imports: [CommonModule, NgFor, NavbarComponent, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss', './skill-mobile.component.scss', './skill-mobile.component.scss']
 })

@@ -39,12 +39,7 @@
   }
 
   .vertical-short-line-mobile {
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    width: 10%;
-    height: 4px;
-    background-color: #9747ff;
+   display: none;
   }
 
   .vertical-long-line-mobile {
@@ -61,7 +56,6 @@
     font-size: 16px;
     text-align: center;
     color: white;
-    padding-right: 80px;
   }
 
   .column-mobile{

@@ -4,7 +4,7 @@
         <a href="#landing-page"><span class="highlight-purple">A</span>hme<span class="highlight-green"
       >t</span></a>
     </div>  
-    <a (click)="openImprint($event)" class="imprint" href="#">Impressum</a>
+    <a (click)="openImprint($event)" class="imprint" href="#">{{ "Imprint" | translate }}</a>
   </div>
   <span class="middle">&copy; Ahmet Yapicilar 2024</span>
   <div class="flex">
@@ -12,5 +12,5 @@
     <a href="mailto:ahmetselimyapicilar@gmail.com" target="_blank"><img src="assets/img/icons/email-icon.png" alt="Email" /></a>
     <a href="https://www.linkedin.com/in/ahmet-yapicilar-3907b0233/" target="_blank"><img src="assets/img/icons/linkedin-icon.png" alt="LinkedIn" /></a>
   </div>
-  <a (click)="openImprint($event)" class="imprint-mobile" href="#">Impressum</a>
+  <a (click)="openImprint($event)" class="imprint-mobile" href="#">{{ "Imprint" | translate }}</a>
 </footer>

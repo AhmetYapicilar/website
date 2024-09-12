@@ -33,12 +33,6 @@
     @media (max-width: 1090px) {
       font-size: 72px;
     }
-    @media (min-width: 1900px) {
-      font-size: 110px;
-    }
-    @media(min-width: 1921px){
-      width: 50%;
-    }
   }
 }
 
@@ -68,9 +62,6 @@
     font-weight: 700;
     font-size: 32px;
     color: white;
-    @media (min-width: 1440px) {
-      font-size: 40px;
-    }
   }
 }
 
@@ -84,15 +75,6 @@
     font-weight: 400;
     font-size: 16px;
     color: white;
-    @media (min-width: 1900px) {
-      font-size: 24px;
-    }
-    @media (min-width: 2500px) {
-      font-size: 40px;
-    }
-    @media (min-width: 3000px) {
-      font-size: 50px;
-    }
   }
 }
 
@@ -112,18 +94,6 @@ button {
   font-weight: 400;
   font-size: 24px;
   margin-top: 32px;
-  @media (min-width: 1450px) {
-    padding: 30px 60px;
-    font-size: 32px;
-  }
-  @media (min-width: 1920px) {
-    padding: 40px 70px;
-    font-size: 40px;
-  }
-  @media (min-width: 3800px) {
-    padding: 80px 140px;
-    font-size: 48px;
-  }
 }
 
 .green-button {
@@ -134,20 +104,7 @@ button {
     background-color: #9747ff;
     transform: scale(1.2);
   }
-  @media (min-width: 1450px) {
-    padding: 35px 65px;
-    &:hover {
-      background-color: #9747ff;
-      transform: scale(1.2);
-    }
   }
-  @media (min-width: 1920px) {
-    padding: 45px 75px;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-}
 
 .flex-end {
   display: flex;
@@ -171,9 +128,5 @@ button {
 .arrow {
   &:hover {
     transform: scale(1.5);
-  }
-  @media (min-width: 1920px) {
-    width: 56px;
-    height: 56px;
   }
 }

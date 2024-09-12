@@ -1,24 +1,24 @@
 <section class="padding section-normal">
     <div class="center">
         <div class="vertical-short-line"></div>
-        <h2>Portfolio</h2>
+        <h2>{{ 'PortfolioTitle' | translate }}</h2>
         <div class="vertical-long-line"></div>
     </div>
-    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    <span>{{ 'PortfolioDescription' | translate }}</span>
     <app-project-join class="flex"></app-project-join>
     <app-project-polloloco class="flex margin-top-40"></app-project-polloloco>
-    <img src="assets/img/purple-shadow-portfolio.png">
+    <img src="assets/img/purple-shadow-portfolio.png" alt="{{ 'PortfolioShadowAlt' | translate }}">
     <!-- <app-comments class="margin-top-40"></app-comments> -->
 </section>
 
 <section class="padding-mobile section-mobile">
     <div class="center-mobile">
         <div class="vertical-short-line-mobile"></div>
-        <h2>Portfolio</h2>
+        <h2>{{ 'PortfolioTitle' | translate }}</h2>
         <div class="vertical-long-line-mobile"></div>
     </div>
-    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    <span>{{ 'PortfolioDescription' | translate }}</span>
     <app-project-join class="column-mobile"></app-project-join>
     <app-project-polloloco class="column-mobile"></app-project-polloloco>
-    <img src="assets/img/purple-shadow-portfolio.png">
+    <img src="assets/img/purple-shadow-portfolio.png" alt="{{ 'PortfolioShadowAlt' | translate }}">
 </section>

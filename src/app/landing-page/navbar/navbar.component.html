@@ -1,46 +1,54 @@
 <nav>
-    <div id="overlay" class="overlay">
-      <a (click)="toggleMenu()" href="#about-me" tabindex="1">About me</a>
-      <a (click)="toggleMenu()" href="#skills">Skills</a>
-      <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
-      <a (click)="toggleMenu()" href="#contact">Contact</a>
+  <div class="navbar">
+    <div class="flags">
+      <img src="assets/img/germanflag.png" (click)="switchLanguage('de')" />
+      <img src="assets/img/englishflag.jpg" (click)="switchLanguage('en')" />
     </div>
-      <a class="name" href="#landing-page">
-        <span class="highlight-purple">A</span>hme<span class="highlight-green"
-          >t</span
-        >
-      </a>
-      <img
-        (click)="toggleMenu()"
-        class="burgermenu"
-        src="assets/img/icons/burgermenu.png"
-      />
-      <div class="links">
-        <a
-          href="#about-me"
-          (click)="
-           setUnderline('aboutme')
-          "
-          [ngClass]="{ underline: underlineAboutme }"
-          tabindex="1"
-          >About me</a
-        >
-        <a
-          href="#skills"
-          (click)="
-            setUnderline('skills')
-          "
-          [ngClass]="{ underline: underlineSkills }"
-          >Skills</a
-        >
-        <a
-          href="#portfolio"
-          (click)="
-            setUnderline('portfolio')
-          "
-          [ngClass]="{ underline: underlinePortfolio }"
-          >Portfolio</a
-        >
-      </div>
-  </nav>
-
+    <div id="overlay" class="overlay">
+      <a (click)="toggleMenu()" href="#about-me" tabindex="1">{{
+        "AboutMeLink" | translate
+      }}</a>
+      <a (click)="toggleMenu()" href="#skills">{{
+        "SkillsLink" | translate
+      }}</a>
+      <a (click)="toggleMenu()" href="#portfolio">{{
+        "PortfolioLink" | translate
+      }}</a>
+      <a (click)="toggleMenu()" href="#contact">{{
+        "ContactLink" | translate
+      }}</a>
+    </div>
+    <a (click)="checkUrlAndNavigate($event)" class="name" href="#landing-page">
+      <span class="highlight-purple">A</span>hme<span class="highlight-green"
+        >t</span
+      >
+    </a>
+    <img
+      (click)="toggleMenu()"
+      class="burgermenu"
+      src="assets/img/icons/burgermenu.png"
+      alt="{{ 'BurgerMenuAlt' | translate }}"
+    />
+    <div class="links">
+      <a
+        href="#about-me"
+        (click)="setUnderline('aboutme')"
+        [ngClass]="{ underline: underlineAboutme }"
+        tabindex="1"
+        >{{ "Aboutme" | translate }}</a
+      >
+      <a
+        href="#skills"
+        (click)="setUnderline('skills')"
+        [ngClass]="{ underline: underlineSkills }"
+        >{{ "Skills" | translate }}</a
+      >
+      <a
+        href="#portfolio"
+        (click)="setUnderline('portfolio')"
+        [ngClass]="{ underline: underlinePortfolio }"
+        >{{ "Portfolio" | translate }}</a
+      >
+    </div>
+  </div>
+</nav>

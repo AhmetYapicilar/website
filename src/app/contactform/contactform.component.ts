@@ -5,11 +5,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule, PrivacyPolicyComponent],
+  imports: [FormsModule, CommonModule, PrivacyPolicyComponent, TranslateModule],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform-form.component.scss', './contactform-mobile.component.scss']
 })
