@@ -35,39 +35,41 @@
   <div class="info-mobile">
     <p>{{ 'SkillsDescription' | translate }}</p>
   </div>
-  <div class="flex-mobile">
-    <div *ngFor="let path of paths | slice:0:3; let i = index">
-      <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i] } }}" />
-        <span>{{ skills[i] }}</span>
+  <div class="skills-icons">
+    <div class="flex-mobile">
+      <div class="one-skill-div" *ngFor="let path of paths | slice:0:3; let i = index">
+        <div class="column-mobile float-left-mobile">
+          <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i] } }}" />
+          <span>{{ skills[i] }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex-mobile">
-    <div *ngFor="let path of paths | slice:3:6; let i = index">
-      <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+3] } }}" />
-        <span>{{ skills[i+3] }}</span>
+    <div class="flex-mobile">
+      <div class="one-skill-div" *ngFor="let path of paths | slice:3:6; let i = index">
+        <div class="column-mobile float-left-mobile">
+          <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+3] } }}" />
+          <span>{{ skills[i+3] }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex-mobile">
-    <div *ngFor="let path of paths | slice:6:9; let i = index">
-      <div class="column-mobile float-left-mobile">
-        <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+6] } }}" />
-        <span>{{ skills[i+6] }}</span>
+    <div class="flex-mobile">
+      <div class="one-skill-div" *ngFor="let path of paths | slice:6:9; let i = index">
+        <div class="column-mobile float-left-mobile">
+          <img src="{{ path }}" alt="{{ 'SkillAltText' | translate : { skill: skills[i+6] } }}" />
+          <span>{{ skills[i+6] }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="center-mobile">
-    <div class="column-mobile flex-0">
-      <img src="{{ paths[9] }}" alt="{{ 'SkillAltText' | translate : { skill: skills[9] } }}" />
-      <span>{{ skills[9] }}</span>
-    </div>
-    <div class="column-mobile flex-0">
-      <img class="info-learning-img-mobile" [ngClass]="{ 'd-none-mobile': !showInfo, 'display-flex-mobile': showInfo }" src="assets/img/learninginfo.png" alt="{{ 'LearningInfoAlt' | translate }}" />
-      <img class="no-animation-mobile" (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" src="assets/img/skills/contiunally-learning-icon.svg" alt="{{ 'ContinuallyLearningIconAlt' | translate }}" />
-      <span (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" class="purple-span">{{ 'ContinuallyLearningText' | translate }}</span>
+    <div class="center-mobile">
+      <div class="column-mobile flex-0">
+        <img src="{{ paths[9] }}" alt="{{ 'SkillAltText' | translate : { skill: skills[9] } }}" />
+        <span>{{ skills[9] }}</span>
+      </div>
+      <div class="column-mobile flex-0">
+        <img class="info-learning-img-mobile" [ngClass]="{ 'd-none-mobile': !showInfo, 'display-flex-mobile': showInfo }" src="assets/img/learninginfo.png" alt="{{ 'LearningInfoAlt' | translate }}" />
+        <img class="no-animation-mobile" (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" src="assets/img/skills/contiunally-learning-icon.svg" alt="{{ 'ContinuallyLearningIconAlt' | translate }}" />
+        <span (touchstart)="onMouseOver()"  (touchend)="onMouseLeave()" class="purple-span">{{ 'ContinuallyLearningText' | translate }}</span>
+      </div>
     </div>
   </div>
   <div class="bottom-mobile">

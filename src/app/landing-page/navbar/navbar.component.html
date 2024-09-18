@@ -1,9 +1,5 @@
 <nav>
   <div class="navbar">
-    <div class="flags">
-      <img src="assets/img/germanflag.png" (click)="switchLanguage('de')" />
-      <img src="assets/img/englishflag.jpg" (click)="switchLanguage('en')" />
-    </div>
     <div id="overlay" class="overlay">
       <a (click)="toggleMenu()" href="#about-me" tabindex="1">{{
         "AboutMeLink" | translate
@@ -17,12 +13,22 @@
       <a (click)="toggleMenu()" href="#contact">{{
         "ContactLink" | translate
       }}</a>
+      <div class="languages-mobile">
+        <span (click)="switchLanguage('en')">EN</span>
+        <div>|</div>
+        <span (click)="switchLanguage('de')">DE</span>
+      </div>
     </div>
     <a (click)="checkUrlAndNavigate($event)" class="name" href="#landing-page">
       <span class="highlight-purple">A</span>hme<span class="highlight-green"
         >t</span
       >
     </a>
+    <div class="languages">
+      <span (click)="switchLanguage('en')">EN</span>
+      <div>|</div>
+      <span (click)="switchLanguage('de')">DE</span>
+    </div>
     <img
       (click)="toggleMenu()"
       class="burgermenu"

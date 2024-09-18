@@ -8,10 +8,14 @@ body {
   font-family: "Poppins";
   background-color: #141d2f;
   max-width: 100%;
+  @media(min-width: 1100px){
+    overflow-x: hidden;
+  }
 }
 
 app-homepage{
   position: relative;
+  overflow-x: hidden;
 }
 
 .padding {

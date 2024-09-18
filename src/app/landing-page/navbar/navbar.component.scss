@@ -1,5 +1,6 @@
 nav {
-  padding: 37px 100px 37px 100px !important;
+  padding: 0 100px !important;
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,19 +17,25 @@ nav {
   }
 }
 
-.flags{
-  position: absolute;
-  left: 0;
-  top: 0;
+.languages {
   display: flex;
+  align-items: center;
   gap: 8px;
+  > div {
+    color: white;
+  }
+  > span {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      color: #70e61c;
+    }
+  }
 }
 
-.flags img{
-  width: 56px;
-  height: 32px;
-  object-fit: cover;
-  cursor: pointer;
+.languages-mobile{
+  display: none;
 }
 
 .fade-section {
@@ -40,11 +47,12 @@ nav {
   opacity: 1;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   @media screen and (min-width: 1920px) {
     width: 1920px;
     max-width: 1920px;

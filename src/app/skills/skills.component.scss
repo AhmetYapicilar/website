@@ -5,6 +5,7 @@
   max-width: 100vw;
   background-color: #141d2f;
   position: relative;
+  padding-right: 0;
   @media (min-width: 1440px) {
     height: 100vh;
   }
@@ -12,6 +13,7 @@
     margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
     max-width: 1920px; /* Begrenze die maximale Breite des Hauptcontainers */
     overflow-x: hidden;
+    height: auto;
   }
 }
 
@@ -53,7 +55,8 @@
   > img {
     width: 40px;
     height: 40px;
-    object-fit: cover;
+    object-fit: contain;
+    flex-shrink: 0;
     transition: all ease-in-out 150ms;
     &:hover {
       animation: updown 1s ease-in-out;
@@ -102,7 +105,6 @@
 .flex {
   display: flex;
   align-items: center;
-  width: 57vw;
   @media(min-width: 1900px){
     width: auto;
   }
@@ -155,6 +157,7 @@ button {
   background-color: #70e61c;
   box-shadow: 4px 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
   border-radius: 10px;
+  border-width: 0;
   gap: 10px;
   color: white;
   font-weight: 400;

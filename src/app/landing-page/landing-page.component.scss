@@ -71,6 +71,18 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  @media(min-width: 2500px) and (max-width: 3799px){
+    width: 400px;
+    height: 520px;
+  }
+  @media(min-width: 3800px) and (max-width: 4089px){
+    width: 500px;
+    height: 640px;
+  }
+  @media(min-width: 4090px){
+    width: 600px;
+    height: 765px;
+  }
 }
  
 @media (min-width: 561px) {

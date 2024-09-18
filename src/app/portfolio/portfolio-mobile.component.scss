@@ -48,7 +48,7 @@
     position: absolute;
     top: 50%;
     right: -100vw;
-    width: 120%;
+    width: 150%;
   }
 
   span {
@@ -74,6 +74,10 @@
     justify-content: center;
     gap: 8px;
     padding-left: 25%;
+  }
+
+  .vertical-long-line-mobile {
+    width: 120%;
   }
 }
 

@@ -24,7 +24,7 @@
   }
 
   .headline-mobile {
-    width: 100%;
+    width: 95vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -53,6 +53,15 @@
     }
   }
 
+  .skills-icons {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
   .flex-mobile {
     display: flex;
     align-items: center;
@@ -63,7 +72,7 @@
   }
 
   .column-mobile {
-    flex: 1; /* Elemente gleichmäßig auf die verfügbare Breite verteilen */
+    // flex: 1; /* Elemente gleichmäßig auf die verfügbare Breite verteilen */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +80,14 @@
     text-align: center;
     gap: 10px;
     min-width: 0; /* Verhindert, dass die Spalten zu groß werden */
+  }
+
+  .one-skill-div{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .no-animation-mobile {
@@ -98,10 +115,11 @@
   }
 
   .column-mobile img {
-    width: 100%; /* Bildgröße passt sich an die Breite der Spalte an */
-    max-width: 50px; /* Begrenzung der maximalen Bildgröße */
-    height: auto;
-    object-fit: cover;
+    width: 40px; /* Bildgröße passt sich an die Breite der Spalte an */
+    // max-width: 50px; /* Begrenzung der maximalen Bildgröße */
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
     transition: all ease-in-out 150ms;
     &:hover {
       animation: updown 1s ease-in-out;
@@ -171,6 +189,7 @@
     box-shadow: 4px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
     border-radius: 10px;
     font-size: 16px;
+    border-width: 0;
     font-weight: 400;
     color: white;
     cursor: pointer;
@@ -183,7 +202,8 @@
 
 @media (max-width: 520px) {
   .headline-mobile {
-    width: 100%;
+    // width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -230,7 +250,6 @@
 
 @media (max-width: 350px) {
   .headline-mobile {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -239,6 +258,7 @@
       font-weight: 700;
       color: white;
       text-align: end;
+      white-space: nowrap;
     }
     > div {
       width: 40px;

@@ -1,16 +1,32 @@
 footer {
+  border-top: 4px solid #70e61c;
+  background-color: #141d2f;
+  padding: 0 100px !important;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 850px) {
+    padding: 0 25px !important;
+  }
+}
+
+.footer-div{
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  border-top: 4px solid #70e61c;
-  background-color: #141d2f;
+  width: 100%;
   @media (max-width: 850px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
+  }
+  @media screen and (min-width: 1920px) {
+    max-width: 1920px;
+    width: 1920px;
+    padding: 37px 100px;
   }
 }
 

@@ -6,6 +6,10 @@
   gap: 40px;
   margin-top: 200px;
   margin-bottom: 100px;
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto; /* Zentriere den Hauptcontainer auf dem Bildschirm */
+    max-width: 1920px; /* Begrenze die maximale Breite des Hauptcontainers */
+  }
 }
 
 h1 {
@@ -31,4 +35,16 @@ p {
 a {
   text-decoration: none;
   color: gold;
+}
+
+.margin-top{
+  display: none;
+}
+
+@media(min-width: 1920px){
+  .margin-top{
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
 }

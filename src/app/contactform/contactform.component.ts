@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule, PrivacyPolicyComponent, TranslateModule],
+  imports: [FormsModule, CommonModule, PrivacyPolicyComponent, TranslateModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform-form.component.scss', './contactform-mobile.component.scss']
 })
@@ -23,7 +23,8 @@ export class ContactformComponent {
   email: '',
   message: ''
   }
-  mailTest = true;
+  mailTest = false;
+  messageSent: boolean = false;
   http = inject(HttpClient);
 
   post = {
@@ -39,7 +40,7 @@ export class ContactformComponent {
 
    onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
-      console.log(ngForm);
+      this.messageSent = true;
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -49,12 +50,11 @@ export class ContactformComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+          },
         });
-    } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
-
-      this.resetForm(ngForm);
-    }
+        this.resetForm(ngForm);
+       } 
    }
 
    resetForm(ngForm: NgForm) {
@@ -64,6 +64,9 @@ export class ContactformComponent {
     // Setze die Variablen zurück
     this.isChecked = false;
     this.checkboxTouched = false;
+    setTimeout(() => {
+      this.messageSent = false;
+    }, 3000);
   }
 
   validateCheckbox() {
