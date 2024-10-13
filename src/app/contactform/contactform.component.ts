@@ -3,14 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { PrivacyPolicyComponent } from '../shared/privacy-policy/privacy-policy.component';
-import { Router, RouterModule } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+import { Router, RouterModule, RouterOutlet, RouterLink, RouterLinkActive, ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule, PrivacyPolicyComponent, TranslateModule, RouterModule],
+  imports: [FormsModule, CommonModule, PrivacyPolicyComponent, TranslateModule, RouterModule ],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss', './contactform-form.component.scss', './contactform-mobile.component.scss']
 })
@@ -26,6 +25,7 @@ export class ContactformComponent {
   mailTest = false;
   messageSent: boolean = false;
   http = inject(HttpClient);
+  public routerLinkVariable: string = '/privacy-policy';
 
   post = {
     endPoint: 'https://ahmet-yapicilar.com/sendMail.php',

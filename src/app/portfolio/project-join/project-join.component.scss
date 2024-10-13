@@ -2,23 +2,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 50vw;
   > img {
-    width: 464px;
+    width: 420px;
     height: 400px;
     object-fit: cover;
     @media (max-width: 1100px) {
       width: 350px;
       height: 300px;
     }
-    // @media (min-width: 1400px) {
-    //   width: 550px;
-    //   height: 500px;
-    // }
-    // @media (min-width: 1900px) {
-    //   width: 600px;
-    //   height: 550px;
-    // }
   }
 }
 
@@ -36,7 +27,6 @@
   align-items: flex-start;
   justify-content: flex-end;
   gap: 40px;
-  width: 50vw;
 }
 
 .info {
@@ -80,6 +70,9 @@
     background-color: #70e61c;
     transform: scale(1.2);
   }
+  @media(max-width: 919px) and (min-width: 861px){
+    padding: 10px 15px 10px 15px;
+  }
 }
 
 .github {
@@ -94,5 +87,8 @@
   &:hover {
     background-color: #70e61c;
     transform: scale(1.2);
+  }
+  @media(max-width: 919px) and (min-width: 861px){
+    padding: 10px 15px 10px 15px;
   }
 }

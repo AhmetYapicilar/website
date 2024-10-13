@@ -55,7 +55,7 @@
               />
             </label>
             <p>
-              {{ 'ContactPrivacyText1' | translate }} <a (click)="openPrivacyPolicy($event)" href="#">{{ 'ContactPrivacyLink' | translate }}</a> {{ 'ContactPrivacyText2' | translate }}
+              {{ 'ContactPrivacyText1' | translate }} <a [routerLink]="routerLinkVariable">{{ 'ContactPrivacyLink' | translate }}</a> {{ 'ContactPrivacyText2' | translate }}
             </p>
           </div>
           <div *ngIf="!isChecked && checkboxTouched" class="error-message">
@@ -80,7 +80,7 @@
       </form>
       <div class="flex-end">
         <a href="#landing-page">
-          <img class="arrow" src="assets/img/icons/arrow-up.png" alt="{{ 'ArrowUpAlt' | translate }}" />
+          <img class="arrow" src="assets/img/icons/arrow-up.svg" alt="{{ 'ArrowUpAlt' | translate }}" />
         </a>
       </div>
     </div>
@@ -92,7 +92,7 @@
   />
 </section>
 
-<section class="padding-mobile section-mobile">
+<section class="padding padding-mobile section-mobile">
   <div class="headline-mobile">
     <div class="vertical-violet-line-mobile"></div>
     <h2>{{ 'ContactHeader' | translate }}</h2>
@@ -148,7 +148,7 @@
             />
           </label>
           <p>
-            {{ 'ContactPrivacyText1' | translate }} <a (click)="openPrivacyPolicy($event)" href="#">{{ 'ContactPrivacyLink' | translate }}</a> {{ 'ContactPrivacyText2' | translate }}
+            {{ 'ContactPrivacyText1' | translate }} <a [routerLink]="routerLinkVariable">{{ 'ContactPrivacyLink' | translate }}</a> {{ 'ContactPrivacyText2' | translate }}
           </p>
         </div>
         <div *ngIf="!isChecked && checkboxTouched" class="error-message-mobile">
@@ -169,7 +169,7 @@
   </div>
   <div class="flex-end-mobile">
     <a href="#landing-page">
-      <img class="arrow-up-mobile" src="assets/img/icons/arrow-up.png" alt="{{ 'ArrowUpAlt' | translate }}" />
+      <img class="arrow-up-mobile" src="assets/img/icons/arrow-up.svg" alt="{{ 'ArrowUpAlt' | translate }}" />
     </a>
   </div>
   <img

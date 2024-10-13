@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './landing-page/navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -11,6 +11,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router'; // Importiere das RouterModule
+import { routes } from './app.routes'; // Importiere deine Routen
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,11 @@ import { TranslateService } from '@ngx-translate/core';
     PortfolioComponent,
     ContactformComponent,
     FooterComponent,
-    TranslateModule
+    TranslateModule,
+    RouterOutlet, 
+    RouterLink, 
+    RouterLinkActive, 
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

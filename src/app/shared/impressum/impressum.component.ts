@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, FooterComponent],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })

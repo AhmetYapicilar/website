@@ -1,5 +1,4 @@
 .section-normal {
-  min-height: 100vh;
   max-width: 100%;
   background-color: #141d2f;
   display: flex;
@@ -40,9 +39,12 @@
 .vertical-short-line {
   width: 15%;
   position: absolute;
-  left: 88px;
+  left: 120px;
   background-color: #9747ff;
   height: 4px;
+  @media(max-width: 850px){
+    display: none;
+  }
   @media (min-width: 1430px){
     display: none;
   }
@@ -87,7 +89,7 @@ img {
   position: absolute;
   left: 0;
   bottom: 0px;
-  height: 550px;
+  height: 500px;
   @media (min-width: 1921px){
     display: none;
   }

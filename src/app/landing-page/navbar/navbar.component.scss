@@ -1,5 +1,4 @@
 nav {
-  padding: 0 100px !important;
   height: 100px;
   position: fixed;
   top: 0;
@@ -25,7 +24,7 @@ nav {
     color: white;
   }
   > span {
-    font-size: 24px;
+    font-size: 16px;
     color: white;
     cursor: pointer;
     &:hover {
@@ -53,10 +52,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding-inline: 100px;
   @media screen and (min-width: 1920px) {
     width: 1920px;
     max-width: 1920px;
-    padding: 37px 100px;
   }
   > a {
     text-decoration: none;
@@ -67,8 +66,7 @@ nav {
 }
 
 .underline {
-  text-decoration: underline !important;
-  text-decoration-color: #9747ff !important;
+  color: #9747ff !important;
 }
 
 .overlay {
@@ -116,7 +114,6 @@ nav {
 .links {
   display: flex;
   align-items: center;
-  margin-right: 200px;
   gap: 32px;
   @media screen and (min-width: 1920px) {
     justify-content: flex-end;

@@ -17,6 +17,6 @@ export class FooterComponent {
   openImprint(event: Event) {
     //   let imprint = new ImpressumComponent();
     event.preventDefault();
-    this.router.navigateByUrl('/imprint/');
+    this.router.navigateByUrl('/imprint');
   }
 }

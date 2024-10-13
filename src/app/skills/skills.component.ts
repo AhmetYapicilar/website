@@ -27,16 +27,16 @@ export class SkillsComponent {
 
 
   paths = [
-    "assets/img/skills/html-icon.png",
-    "assets/img/skills/css-icon.png",
-    "assets/img/skills/js-icon.png",
-    "assets/img/skills/ts-icon.png",
-    "assets/img/skills/angular-icon.png",
-    "assets/img/skills/firebase-icon.png",
-    "assets/img/skills/git-icon.png",
-    "assets/img/skills/restapi-icon.png",
-    "assets/img/skills/scrum-icon.png",
-    "assets/img/skills/materialdesign-icon.png"
+    "assets/img/skills/html-icon.svg",
+    "assets/img/skills/css-icon.svg",
+    "assets/img/skills/js-icon.svg",
+    "assets/img/skills/ts-icon.svg",
+    "assets/img/skills/angular-icon.svg",
+    "assets/img/skills/firebase-icon.svg",
+    "assets/img/skills/git-icon.svg",
+    "assets/img/skills/restapi-icon.svg",
+    "assets/img/skills/scrum-icon.svg",
+    "assets/img/skills/materialdesign-icon.svg"
   ]
 
   skills = [

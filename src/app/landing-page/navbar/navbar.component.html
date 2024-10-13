@@ -24,11 +24,6 @@
         >t</span
       >
     </a>
-    <div class="languages">
-      <span (click)="switchLanguage('en')">EN</span>
-      <div>|</div>
-      <span (click)="switchLanguage('de')">DE</span>
-    </div>
     <img
       (click)="toggleMenu()"
       class="burgermenu"
@@ -55,6 +50,11 @@
         [ngClass]="{ underline: underlinePortfolio }"
         >{{ "Portfolio" | translate }}</a
       >
+      <div class="languages">
+        <span (click)="switchLanguage('en')">EN</span>
+        <div>|</div>
+        <span (click)="switchLanguage('de')">DE</span>
+      </div>
     </div>
   </div>
 </nav>

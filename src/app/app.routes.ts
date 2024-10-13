@@ -5,6 +5,7 @@ import { PrivacyPolicyComponent } from './shared/privacy-policy/privacy-policy.c
 
 export const routes: Routes = [
     { path: '', component: HomepageComponent },
-    { path: 'imprint/', component: ImpressumComponent },
-    { path: 'privacy-policy/', component: PrivacyPolicyComponent }
+    { path: 'imprint', component: ImpressumComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];
+
