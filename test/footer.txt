@@ -9,7 +9,7 @@
   <span class="middle">&copy; Ahmet Yapicilar 2024</span>
   <div class="flex">
     <a href="https://github.com/AhmetYapicilar/"><img src="assets/img/icons/github-icon.png" alt="Github" /></a>
-    <a href="mailto:ahmetselimyapicilar@gmail.com"><img src="assets/img/icons/email-icon.png" alt="Email" /></a>
+    <a href="mailto:contact@ahmet-yapicilar.com"><img src="assets/img/icons/email-icon.png" alt="Email" /></a>
     <a href="https://www.linkedin.com/in/ahmet-yapicilar-3907b0233/"><img src="assets/img/icons/linkedin-icon.png" alt="LinkedIn" /></a>
   </div>
 </footer>
